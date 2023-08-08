@@ -73,12 +73,12 @@ public class Task implements Entity {
 
     @Override
     public boolean isComplete() {
-        return !this.name.equals("") && !this.description.equals("") && !this.startDate.equals("") &&!this.endDate.equals("");
+        return this.getNum()!=0 && !this.name.equals("") && !this.description.equals("") && !this.startDate.equals("") &&!this.endDate.equals("");
     }
 
     @Override
     public Object[] toArrayObject() {
-        return new Object[]{this.num, this.name, this.description, this.startDate, this.endDate, this.completed, this.responsible.toString()};
+        return new Object[]{this.num, this.name, this.description, this.startDate, this.endDate, this.completed, this.responsible};
     }
 
 }
