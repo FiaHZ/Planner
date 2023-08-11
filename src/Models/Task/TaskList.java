@@ -45,7 +45,7 @@ public class TaskList implements List<Task> {
     @Override
     public Task search(Object id) {
         for (Task task : tasks) {
-            if (task.getNum().equals(id)) {
+            if (task.getName().equals(id)) {
                 return task;
             }
         }
